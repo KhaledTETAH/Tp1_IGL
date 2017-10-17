@@ -91,20 +91,21 @@ public class VectorHelper {
 
 
 /**The MIN and the MAX of the vector**/
-public void min_max(){
-    int min, max;
+public int[] min_max(){
+    int tmptab[]=new int[2];
     int n=this.size;
-    max= vector[0];
-    min= vector[0];
+    tmptab[0]= vector[0];
+    tmptab[1]= vector[0];
     for (int i=1;i<n;i++)
     {
         if ((this.vector[i]<min){
-            min=this.vector[i];
+            tmptab[0]=this.vector[i];
         }
         if (this.vector[i]>max){
-            max=this.vector[i];
+            tmptab[1]=this.vector[i];
         }
     }
+    return tmptab;
 }
 
  /**Application of a formula for all the elements of the vector**/
@@ -112,9 +113,8 @@ public void min_max(){
 
  public void formula()
  {
-     int formVector[]=new int[size];
-     for(int i=0; i<size; i++){
-         formVector[i]=formVector[i]*2;
+     for (i=0; i<size; i++){
+         this.vector *=2;
      }
-     this.vector=formVector;
+
  }
